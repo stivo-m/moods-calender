@@ -1,0 +1,19 @@
+{
+  "name": "moods_calender",
+  "version": "1.0.0",
+  "description": "A moods-calender created for the 100projectsIn10Days",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stivo-m/moods-calender.git"
+  },
+  "author": "Steven Maina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stivo-m/moods-calender/issues"
+  },
+  "homepage": "https://github.com/stivo-m/moods-calender"
+}
