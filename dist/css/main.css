@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #404a50;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding-top: 2rem; }
+  .container .header {
+    padding: 0.5rem; }
+    .container .header .lg-headings {
+      font-size: 50px;
+      color: white; }
+  .container .text-primary {
+    color: #FFC107;
+    font-size: 25px; }
+  .container .text-secondary {
+    font-size: 20px;
+    margin: 5px 0; }
+  .container .mood-container {
+    margin: 15px 0; }
+    .container .mood-container .mood {
+      background: transparent;
+      outline: none;
+      border: none;
+      margin-right: 19px;
+      cursor: pointer; }
+      .container .mood-container .mood.mood_1 {
+        color: #09a809; }
+      .container .mood-container .mood.mood_2 {
+        color: #039BE5; }
+      .container .mood-container .mood.mood_3 {
+        color: #00ACC1; }
+      .container .mood-container .mood.mood_4 {
+        color: #D81B60; }
+      .container .mood-container .mood.mood_5 {
+        color: #E53935; }
+      .container .mood-container .mood.selected {
+        animation: glow 1.2s ease-in-out infinite alternate; }
+      .container .mood-container .mood:hover {
+        transition: all 0.5s ease-out;
+        color: #FFC107; }
+  .container .calender {
+    margin: 20px 50px;
+    padding: 8px;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid #353d42; }
+    .container .calender.tagline {
+      color: #FFC107;
+      font-size: 25px; }
+    .container .calender.month {
+      color: white;
+      font-size: 20px; }
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #404a50, 0 0 30px #FFC107, 0 0 40px #FFC107, 0 0 50px #FFC107; }
+  to {
+    text-shadow: 0 0 20px #404a50, 0 0 30px #FFC107, 0 0 40px #FFC107, 0 0 50px #FFC107, 0 0 60px #FFC107, 0 0 80px #FFC107; } }

@@ -1,0 +1,124 @@
+$primary-color: #FFC107;
+$background-color: rgb(64, 74, 80);
+
+@mixin  easeOut {
+    transition: all 0.5s ease-out;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: $background-color;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 2rem;
+    
+
+    .header{
+        padding: 0.5rem;
+
+        .lg-headings{
+            font-size: 50px;
+            color: white;
+        }
+    }
+
+
+    .text-primary{
+        color: $primary-color;
+        font-size: 25px;
+    }
+
+
+    .text-secondary{
+        font-size: 20px;
+        margin: 5px 0;
+    }
+    .mood-container{  
+        margin: 15px 0;
+        
+        .mood{
+            background: transparent;
+            outline: none;
+            border: none;
+            margin-right: 19px;
+            cursor: pointer;
+            
+
+            &.mood_1{
+                color: rgb(9, 168, 9)
+            }
+
+            &.mood_2{
+                color: #039BE5
+            }
+
+            &.mood_3{
+                color: #00ACC1
+            }
+
+            &.mood_4{
+                color: #D81B60
+            }
+
+            &.mood_5{
+                color: #E53935
+            }
+
+
+            &.selected{
+                animation: glow 1.2s ease-in-out infinite alternate;
+            }
+
+
+            &:hover{
+                @include easeOut();
+                color: $primary-color;
+            }
+        }
+    }
+
+    .calender{
+        margin: 20px 50px;
+        padding: 8px;
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+        border: 1px solid darken($background-color, 5);
+
+        &.tagline{
+            color:$primary-color;
+            font-size: 25px;
+        }
+
+        &.month{
+            color: white;
+            font-size: 20px;
+        }
+    }
+}
+
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px $background-color, 0 0 30px $primary-color, 0 0 40px $primary-color, 0 0 50px $primary-color;
+  }
+  to {
+    text-shadow: 0 0 20px $background-color, 0 0 30px $primary-color, 0 0 40px $primary-color, 0 0 50px $primary-color, 0 0 60px $primary-color , 0 0 80px $primary-color;
+  }
+}
