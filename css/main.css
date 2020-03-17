@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #404a50;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+:root {
+  --mood-color-1: rgb(9, 168, 9);
+  --mood-color-2: #039BE5;
+  --mood-color-3: #00897B;
+  --mood-color-4: #D81B60;
+  --mood-color-5: #E53935; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding-top: 2rem; }
+  .container .header {
+    padding: 0.5rem; }
+    .container .header .lg-headings {
+      font-size: 50px;
+      color: white; }
+  .container .randomize .btn-primary, .container .randomize .btn-secondary {
+    margin: 9px 9px;
+    padding: 13px 15px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 9px;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .container .randomize .btn-primary {
+    background: #FFC107;
+    box-shadow: 1px 1px 1px #edb100;
+    color: white; }
+  .container .randomize .btn-secondary {
+    background: #2c3237;
+    box-shadow: 1px 1px 1px #1e2326;
+    color: white; }
+  .container .text-primary {
+    color: #FFC107;
+    font-size: 25px; }
+  .container .text-secondary {
+    font-size: 20px;
+    margin: 5px 0; }
+  .container .mood-container {
+    margin: 15px 0; }
+    .container .mood-container .mood {
+      background: transparent;
+      outline: none;
+      border: none;
+      margin-right: 19px;
+      cursor: pointer; }
+      .container .mood-container .mood.mood_1 {
+        color: var(--mood-color-1); }
+      .container .mood-container .mood.mood_2 {
+        color: var(--mood-color-2); }
+      .container .mood-container .mood.mood_3 {
+        color: var(--mood-color-3); }
+      .container .mood-container .mood.mood_4 {
+        color: var(--mood-color-4); }
+      .container .mood-container .mood.mood_5 {
+        color: var(--mood-color-5); }
+      .container .mood-container .mood.selected {
+        transition: all 0.5s ease-out;
+        animation: glow 1.2s ease-in-out infinite alternate; }
+      .container .mood-container .mood :hover {
+        transition: all 0.5s ease-out;
+        color: #FFC107; }
+  .container .calender {
+    padding: 20px 50px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.7rem; }
+    .container .calender.tagline {
+      color: #FFC107;
+      font-size: 25px; }
+    .container .calender.month {
+      color: white;
+      font-size: 20px; }
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #404a50, 0 0 30px #FFC107, 0 0 40px #FFC107, 0 0 50px #FFC107; }
+  to {
+    text-shadow: 0 0 20px #404a50, 0 0 30px #FFC107, 0 0 40px #FFC107, 0 0 50px #FFC107, 0 0 60px #FFC107, 0 0 80px #FFC107; } }
+
+.months h3 {
+  margin: 5px 0;
+  text-align: center;
+  color: #FFC107; }
+
+.days_container,
+.week_days_container {
+  display: flex;
+  flex-wrap: wrap; }
+
+.days,
+.week_days {
+  font-size: 14px;
+  margin-bottom: 5px;
+  height: calc(100% / 7);
+  width: calc(100% / 7);
+  text-align: center; }
+
+.days .circle {
+  background-color: #30383c;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  width: 20px;
+  height: 20px; }
+
+.days .circle:hover {
+  transform: scale(1.1); }
+
+.icons {
+  margin-bottom: 1rem; }
+  .icons a {
+    padding: 0.4rem; }
+    .icons a i {
+      color: white; }
+      .icons a i:hover {
+        color: #FFC107;
+        transition: all 0.5s ease-out; }
+
+@media screen and (max-width: 768px) {
+  .calender {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1.7rem !important; } }
+
+@media screen and (max-width: 500px) {
+  .calender {
+    grid-template-columns: 1fr !important;
+    grid-gap: 1.7rem !important; }
+  .lg-headings {
+    font-size: 30px !important; }
+  .text-primary {
+    font-size: 20px !important;
+    margin: 5px 0 !important; }
+  .text-secondary {
+    font-size: 16px !important;
+    margin: 5px 0; }
+  .btn-primary, .btn-secondary {
+    width: 70% !important; }
+  .mood {
+    font-size: 10px !important; } }
